@@ -1,0 +1,25 @@
+{
+  "name": "cypress-nowy2",
+  "version": "1.0.0",
+  "description": "Cypress test beginning",
+  "main": "index.js",
+  "scripts": {
+    "runner": "cypress open --e2e --browser chrome --config baseUrl=https://uitestingplayground.com --env demoVar=Hello_from_json",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress": "cypress run",
+    "cypress-open": "cypress open"
+  },
+  "author": "Jakub",
+  "license": "ISC",
+  "dependencies": {
+    "@cypress/xpath": "^2.0.3",
+    "cypress": "^13.6.1",
+    "run": "^1.4.0",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "cy-verify-downloads": "^0.2.3",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-real-events": "^1.11.0"
+  }
+}
