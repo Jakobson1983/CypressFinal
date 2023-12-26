@@ -1,6 +1,6 @@
 import { defineConfig } from "cypress";
 // verify download import
-const { verifyDownloadTasks  } = require("cy-verify-downloads");
+const { verifyDownloadTasks } = require('cy-verify-downloads');
 
 export default defineConfig({
   e2e: {
@@ -8,6 +8,8 @@ export default defineConfig({
     setupNodeEvents(on, config) {
       // verify download import  
       on('task', verifyDownloadTasks);
+      
+      
     },
     env: {
       demoVar: "Hello cypress.config !!!",

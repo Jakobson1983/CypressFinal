@@ -1,5 +1,6 @@
 import "cypress-file-upload";
 require("cy-verify-downloads").addCustomCommand();
+import "@testing-library/cypress/add-commands";
 ///<reference types="cypress" />
 
 // ***********************************************
