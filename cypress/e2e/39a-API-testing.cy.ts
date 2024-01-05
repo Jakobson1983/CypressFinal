@@ -20,16 +20,17 @@ describe("API testing", () => {
     // I need to understand this in this context.
     const userID: string = this.userID;
     const token: string = this.token;
+    cy.log(token);
     const authorization: string = `Bearer ${token}`;
     const options = {
         method: "GET",
         // Pls explain this to me, userID
-        url: `${Cypress.env("domoQA")}/account/v1/User/${userID}`,
+        url: `${Cypress.env("demoQA")}/account/v1/User/${userID}`,
         headers: {
             authorization,
         },
     };
-    cy.request(options).should((response) => {
+    cy.request(options).then((response) => {
       cy.log("status code is: " ).then(() => {
         expect(response.status).to.be.equal(200);
         expect(response.statusText).to.be.equal("OK");
